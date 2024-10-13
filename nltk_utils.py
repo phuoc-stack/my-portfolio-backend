@@ -1,5 +1,6 @@
 import nltk
 nltk.download('punkt')
+nltk.data.path.append('C:\\Users\\hosut\\Downloads\\my-portfolio-backend\\nltk_data')
 import numpy as np
 from nltk.stem.porter import PorterStemmer
 stemmer = PorterStemmer()
