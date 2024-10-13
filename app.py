@@ -4,7 +4,7 @@ from flask_cors import CORS
 from chat import get_response
 
 app=Flask(__name__)
-CORS(app, origins=["https://kirsyho-porfolio.netlify.app"])
+CORS(app)
 
 @app.get("/")
 def index_get():
@@ -21,12 +21,12 @@ def predict():
     except Exception as e:
         print(f"Error: {e}")
         return jsonify({"error": "Internal Server Error"}), 500
+@app.route("/health", methods=["GET"])
+def health_check():
+    return jsonify({"status": "OK"})
 
 if __name__=="__main__":
     app.run(debug=True)
 
-@app.route("/health", methods=["GET"])
-def health_check():
-    return jsonify({"status": "OK"})
 
 
