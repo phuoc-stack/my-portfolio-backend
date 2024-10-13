@@ -4,7 +4,7 @@ from flask_cors import CORS
 from chat import get_response
 
 app=Flask(__name__)
-CORS(app, origins=["https://kirsyho-porfolio.netlify.app"])
+CORS(app, resources={r"/*": {"origins": "https://kirsyho-porfolio.netlify.app"}})
 
 @app.get("/")
 def index_get():
