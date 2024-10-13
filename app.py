@@ -4,7 +4,7 @@ from flask_cors import CORS
 from chat import get_response
 
 app=Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.get("/")
 def index_get():
@@ -12,8 +12,10 @@ def index_get():
 
 @app.post("/predict")
 def predict():
+    print("Request Headers:", request.headers)  # Check the incoming headers
     try:
         text = request.get_json().get("message")
+        print(f"Received message: {text}")  # Log received message
         response = get_response(text)
         print(f"Response: {response}")  
         message = {"answer": response}
