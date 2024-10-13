@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
-
+import logging
 from chat import get_response
 
 app=Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+
+logging.basicConfig(level=logging.DEBUG)
 
 @app.get("/")
 def index_get():
@@ -12,21 +14,18 @@ def index_get():
 
 @app.post("/predict")
 def predict():
-    print("Request Headers:", request.headers)  # Log incoming headers
     try:
         text = request.get_json().get("message")
-        print(f"Received message: {text}")  # Log received message
-        
-        if not text:
+        if text is None:
+            logging.error("No message provided in the request")
             return jsonify({"error": "No message provided"}), 400
 
-        response = get_response(text)  # Your logic to get the response
-        print(f"Response: {response}")  # Log the response
-        
+        response = get_response(text)
+        logging.info(f"Received message: {text}, Response: {response}")
         message = {"answer": response}
         return jsonify(message)
     except Exception as e:
-        print(f"Error: {e}")  # Log the exception message
+        logging.error(f"An error occurred: {e}", exc_info=True)
         return jsonify({"error": "Internal Server Error"}), 500
 
 @app.route("/health", methods=["GET"])
