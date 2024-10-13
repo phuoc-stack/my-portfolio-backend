@@ -1,0 +1,84 @@
+[33mcommit 2ddade01c874bb219b957df9e8aef73845af24d9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 16:54:40 2024 +1100
+
+    Successfully trained the model and tested chat functionality
+
+[33mcommit 5a02d52f92c6b68fb3a314c5db85ffa73cd9c1e2[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 16:49:27 2024 +1100
+
+    Update .gitignore to exclude environment files
+
+[33mcommit 6f9e04e3f83c02ec311c545f9608c0be3ea8a727[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 16:39:17 2024 +1100
+
+    Ignore virtual environment files
+
+[33mcommit 5e09c2859a3a46d36a10f0b2baba89a5a56cee4b[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 16:29:56 2024 +1100
+
+    recreate env
+
+[33mcommit f1b1d4143e65f30a3c5515319e2e91b91e1aaad0[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 15:59:17 2024 +1100
+
+    add base.html
+
+[33mcommit ade3d366d6aa3c6383065419a5329e1d25ff1973[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 15:47:06 2024 +1100
+
+    Add gunicorn to requirements
+
+[33mcommit 916ea7216a97bd293331804ef83021d0fe6417e2[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 15:27:57 2024 +1100
+
+    resolve conflicts
+
+[33mcommit b71661573394630f24d613813e0ae7705d362dbd[m
+Merge: 45e620c5 d6fcec89
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 15:18:01 2024 +1100
+
+    Resolved merge conflicts
+
+[33mcommit 45e620c5bbd91ffb29cec5f8533f8f67cdf7ef9f[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 15:10:48 2024 +1100
+
+    Update requirements.txt after filtering large files
+
+[33mcommit 4a90c6bf853fd6342e9e5765a3807a5317bd379b[m
+Author: Kirsy <hosuthaophuoc@gmail.com>
+Date:   Sun Oct 13 14:29:25 2024 +1100
+
+    fix bugs
+
+[33mcommit d6fcec89f09052703a3ddc1f1b834d3dad452d88[m
+Author: phuoc-stack <74831242+phuoc-stack@users.noreply.github.com>
+Date:   Sun Oct 13 12:54:28 2024 +1100
+
+    Add files via upload
+
+[33mcommit b913ee46efa93fe8e4b3445cc529637ab8b55d79[m
+Author: phuoc-stack <74831242+phuoc-stack@users.noreply.github.com>
+Date:   Sun Oct 13 12:36:56 2024 +1100
+
+    Add files via upload
+
+[33mcommit b0a15411cb3a2e1f4a951904f78f5ba50de45177[m
+Author: phuoc-stack <74831242+phuoc-stack@users.noreply.github.com>
+Date:   Sun Oct 13 12:31:29 2024 +1100
+
+    Add files via upload
+
+[33mcommit ea75d02c5bdeb3c249b201ac279cce2521dbfd1e[m
+Author: phuoc-stack <74831242+phuoc-stack@users.noreply.github.com>
+Date:   Sun Oct 13 12:27:20 2024 +1100
+
+    Add files via upload
