@@ -1,10 +1,10 @@
 version: 1
 services:
   - type: web
-    name: your-service-name
+    name: my portfolio
     env: python
     plan: free
     buildCommand: |
       pip install -r requirements.txt
       python -c "import nltk; nltk.download('punkt')"
-    startCommand: python app.py  # replace with your actual start command
+    startCommand: python app.py  
