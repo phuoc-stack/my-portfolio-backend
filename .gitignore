@@ -1,1 +1,6 @@
 newenv/
+*.dll
+*.lib
+*.so
+*.pyc
+__pycache__/
