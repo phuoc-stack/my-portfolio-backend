@@ -9,9 +9,10 @@ import nltk
 
 # Download the 'punkt' tokenizer if not already downloaded
 try:
-    nltk.data.find('tokenizers/punkt')
+    nltk.data.find('tokenizers/punkt_tab')
 except LookupError:
-    nltk.download('punkt')
+    print("Downloading 'punkt_tab'...")
+    nltk.download('punkt_tab')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 nltk.data.path.append('/opt/render/nltk_data')
 

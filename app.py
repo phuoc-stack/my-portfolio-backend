@@ -4,17 +4,26 @@ import logging
 from chat import get_response
 import nltk
 
+app=Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
+logging.basicConfig(level=logging.DEBUG)
+
 # Download the 'punkt' tokenizer if not already downloaded
+try:
+    nltk.data.find('tokenizers/punkt_tab')
+    logging.info("Found 'punkt_tab' tokenizer.")
+except LookupError:
+    logging.error("Downloading 'punkt_tab' tokenizer.")
+    nltk.download('punkt_tab')  # Download the resource
+# Ensure 'punkt' tokenizer is also available
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
+    logging.error("Downloading 'punkt' tokenizer.")
     nltk.download('punkt')
+
+# Set the NLTK data path for deployment
 nltk.data.path.append('/opt/render/nltk_data')
-
-app=Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
-
-logging.basicConfig(level=logging.DEBUG)
 
 @app.get("/")
 def index_get():
