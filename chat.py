@@ -5,8 +5,15 @@ import torch
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
+import nltk
 
+# Download the 'punkt' tokenizer if not already downloaded
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+nltk.data.path.append('/opt/render/nltk_data')
 
 with open('intents.json', 'r') as json_data:
     intents = json.load(json_data)

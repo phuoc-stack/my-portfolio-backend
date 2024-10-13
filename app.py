@@ -2,6 +2,14 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import logging
 from chat import get_response
+import nltk
+
+# Download the 'punkt' tokenizer if not already downloaded
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
+nltk.data.path.append('/opt/render/nltk_data')
 
 app=Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
